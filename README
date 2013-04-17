@@ -1,1 +1,5 @@
-This file was created by PyCharm 2.7.1 for binding GitHub repository
+first version.
+downloading images to specific folder from user site of soup.io
+ignoring images like avatars or statics like buttons
+possibility to specify from where start downloading (by date or by since attr)
+basic handling of exceptions
