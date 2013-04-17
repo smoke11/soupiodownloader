@@ -47,6 +47,7 @@ def main(username, since="0"): # as base of coding, used this: http://stackoverf
     timeStamp=since
     lastNumberOfLinks=0
     numberOfLinks=0
+    global lastTimeOfPost
     lastTimeOfPost="no date yet"
     timeOfPost = "no date yet"
     #check if download from newest reposts or from specific
@@ -146,13 +147,14 @@ def downloadImages(soup, parsed):
                             abbrs=span.findAll('abbr')
                             if len(abbrs)>=0:
                                 timeOfPost=abbrs[0].attrs[0][1]
+                                global lastTimeOfPost
                                 lastTimeOfPost=timeOfPost
                                 split = timeOfPost.split(" ")
                                 year = split[2]
                                 month = split[0]
                                 day = split[1]
-                                image_folder=year
                                 #making folders for specific year and month
+                                global image_folder
                                 image_folder=year+"/"+month
                                 if not os.path.exists(main_folder+image_folder):
                                     try:
