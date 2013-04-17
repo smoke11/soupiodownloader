@@ -1,6 +1,7 @@
 from BeautifulSoup import BeautifulSoup as bs
 import urlparse
-import datetime, time
+import datetime
+import time
 from urllib2 import urlopen
 from urllib import urlretrieve
 import os
@@ -155,15 +156,15 @@ def downloadImages(soup, parsed, out_folder, strstarttime):
             continue
 
 def _usage():
-    print "Downloader\n for images from soup.io sites"
+    print "Downloader for images from soup.io sites"
     print "usage: python main.py username pathForImages since/date\r"
     print "i.e. python main.py smoke11 E:\soupioimages date=2012-04-02\r"
     print "i.e. python main.py smoke11 E:\soupioimages 296358805\n"
-    print "pathForImages - optional argument. if it`s empty it will make folder 'soup_io_images' in your script directory\r"
+    print "pathForImages - optional argument. if it`s empty it will make folder 'soup_io_images' in your script directory\n"
     print "since/date - optional argument, you can put date in format date=YYYY-MM-DD, \r"
     print "or you can put since number - you can get it from soup.io url, when loading older post manually. \r"
-    print "i.e. 'http://smoke11.soup.io/since/52838091?mode=own%3D8ee428d6102f5fcece4826e1cc4b6c3a' where wanted number is between 'since/'and '?' sign\n"
-    print "if you leave it empty or put '0' it will start downloading from your newest reposted image from main site of user."
+    print "i.e. 'http://smoke11.soup.io/since/52838091?mode=own%3D8ee428d6102f5fcece4826e1cc4b6c3a' where wanted number is between 'since/'and '?' sign\r"
+    print "if you leave it empty or put '0' it will start downloading from your newest reposted image from main site of user.\n"
 
 if __name__ == "__main__":
     _usage()
